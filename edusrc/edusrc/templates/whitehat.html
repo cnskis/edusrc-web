@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+墨雪飘影
+QQ：417230867
+公众号：墨雪飘影
+2021/03/12
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ user.name }}欢迎您</title>
+	<style>
+	a{
+		text-decoration: none;
+	}
+	li{
+		list-style-type:none;
+	}
+	#container{
+		margin:0 auto;
+		text-align:center;
+	}
+	/*这里是伪类选择器*/
+	a:link {color:#FF0000;} /* 未访问的链接 */
+	a:visited {color:#00FF00;} /* 已访问的链接 */
+	a:hover {color:#FF00FF;} /* 鼠标划过链接 */
+	a:active {color:#0000FF;} /* 已选中的链接 */
+	</style>
+</head>
+<body>
+<div id="container">
+<h1> {{ user.name }}欢迎您，当前Rank:{{ user.rank }}</h1>
+<li>总漏洞数:{{ user.allbugs }}，总通过数:{{ user.passbugs }}，通过率:{{ user.passpercent }}</li>
+<li>低危:{{ user.low }}，中危:{{ user.mid }}，高危:{{ user.high }}，严重:{{ user.critical }}</li>
+<br />
+<p id="hitokoto"><a href="#" id="hitokoto_text">:废话加载中...</a></p>
+<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+<a href="https://edusrc.shikangsi.com" target="_blank" />墨雪飘影</a><br />QQ：417230867<br />公众号：墨雪飘影
+</div>
+</body>
+</html>
